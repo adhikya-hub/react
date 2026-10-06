@@ -1,0 +1,28 @@
+/* Layout-only: fixed list width in the horizontally-scrolling board,
+   and scroll for a tall card stack. Colors/borders/padding come from antd Card. */
+
+.list {
+  flex: 0 0 260px;
+  width: 260px;
+  max-height: 100%;
+}
+
+.list .ant-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: calc(100vh - 12rem);
+  overflow-y: auto;
+}
+
+.list-extra {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

@@ -1,0 +1,20 @@
+.checkitem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.2rem;
+}
+
+.checkitem-name {
+  flex: 1 1 auto;
+  overflow-wrap: anywhere;
+}
+
+.checkitem-delete {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.checkitem:hover .checkitem-delete {
+  opacity: 1;
+}

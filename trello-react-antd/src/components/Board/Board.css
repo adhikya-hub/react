@@ -1,0 +1,31 @@
+/* Layout-only rules antd doesn't provide a component for:
+   sticky header + horizontally-scrolling board area. */
+
+.board-page {
+  height: 100%;
+  min-height: 0;
+}
+
+.board-bar {
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding: 0.75rem 1.25rem;
+  line-height: normal;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.board-scroll {
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.lists-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: min-content;
+}

@@ -1,0 +1,286 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4rem 1rem;
+  z-index: 100;
+}
+
+.modal {
+  width: 100%;
+  max-width: 480px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #241338;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.2rem 1.4rem;
+}
+
+/* ---- shared form controls used throughout the modal ---- */
+
+.modal input[type="text"],
+.modal input:not([type]),
+.modal input[type="checkbox"] ~ input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: #fff;
+  padding: 0.4rem 0.55rem;
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+.modal input[type="text"]:focus,
+.modal input:not([type]):focus {
+  outline: none;
+  border-color: #a15a9e;
+}
+
+.modal input[type="text"]::placeholder,
+.modal input:not([type])::placeholder {
+  color: #9d8bab;
+}
+
+.modal button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.modal button[type="submit"] {
+  background: #6b3f7d;
+  color: #fff;
+  padding: 0.35rem 0.75rem;
+  flex: 0 0 auto;
+}
+
+.modal button[type="submit"]:hover {
+  background: #7d4b91;
+}
+
+.modal button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* ---- card title / close row ---- */
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  cursor: text;
+}
+
+.modal-header input {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.modal-header button {
+  background: none;
+  color: #cbb8d8;
+  font-size: 1rem;
+  padding: 0.1rem 0.4rem;
+}
+
+.modal-header button:hover {
+  color: #fff;
+}
+
+.modal h3 {
+  font-size: 0.9rem;
+  color: #cbb8d8;
+  margin: 1rem 0 0.5rem;
+}
+
+.archive-button {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e39a9a;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.archive-button:hover {
+  background: rgba(227, 154, 154, 0.18);
+  color: #fff;
+}
+
+.archive-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* ---- add checklist form ---- */
+
+.add-checklist-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.add-checklist-form input {
+  flex: 1 1 auto;
+}
+
+/* ---- checklists ---- */
+
+.checklists-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checklist {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.6rem 0.7rem;
+}
+
+.checklist-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.checklist-title {
+  flex: 1 1 auto;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: text;
+  overflow-wrap: anywhere;
+}
+
+.checklist-header input {
+  flex: 1 1 auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.checklist-delete {
+  flex: 0 0 auto;
+  background: none;
+  color: #cbb8d8;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.4rem;
+}
+
+.checklist-delete:hover {
+  color: #fff;
+}
+
+/* ---- add checkitem form ---- */
+
+.add-checkitem-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.add-checkitem-form input {
+  flex: 1 1 auto;
+}
+
+/* ---- checkitems ---- */
+
+.checkitem-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.checkitem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.2rem;
+  border-radius: 5px;
+}
+
+.checkitem:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* custom checkbox */
+.checkitem-checkbox {
+  appearance: none;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid #cbb8d8;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.checkitem-checkbox:checked {
+  background: #6b3f7d;
+  border-color: #6b3f7d;
+}
+
+.checkitem-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkitem-name {
+  flex: 1 1 auto;
+  font-size: 0.85rem;
+  cursor: text;
+  overflow-wrap: anywhere;
+}
+
+.checkitem-name.completed {
+  text-decoration: line-through;
+  color: #9d8bab;
+}
+
+.checkitem-input {
+  flex: 1 1 auto;
+  font-size: 0.85rem;
+}
+
+.checkitem-delete {
+  flex: 0 0 auto;
+  background: none;
+  color: #9d8bab;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.35rem;
+  opacity: 0;
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease;
+}
+
+.checkitem:hover .checkitem-delete {
+  opacity: 1;
+}
+
+.checkitem-delete:hover {
+  color: #fff;
+}

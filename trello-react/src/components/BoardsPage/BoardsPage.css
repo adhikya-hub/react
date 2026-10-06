@@ -1,0 +1,63 @@
+.boards-page {
+  min-height: 100vh;
+  padding: 32px;
+  background: #1f1f21;
+  color: #ffffff;
+}
+
+.boards-page h1 {
+  margin: 0 0 24px;
+  font-size: 28px;
+}
+
+.boards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 425px);
+  gap: 22px;
+}
+
+.board-card {
+  display: block;
+  height: 208px;
+
+  border-radius: 15px;
+  overflow: hidden;
+
+  background: #202023;
+  border: 1px solid #111113;
+
+  text-decoration: none;
+  color: #dcdcdc;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.board-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+}
+
+/* Top gradient section */
+.board-card::before {
+  content: "";
+  display: block;
+
+  height: 138px;
+
+  background: linear-gradient(135deg, #775dcc, #d866b2);
+}
+
+/* Board name */
+.board-card h2 {
+  margin: 0;
+  padding: 18px 15px;
+
+  font-size: 28px;
+  font-weight: 500;
+
+  color: #d7d7d9;
+}

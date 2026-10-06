@@ -1,0 +1,5 @@
+/* antd Card handles background/border/hover; just kill default padding/margin
+   quirks so it sits flush in the list. */
+.card .ant-card-body {
+  padding: 0.5rem 0.7rem;
+}

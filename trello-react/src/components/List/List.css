@@ -1,0 +1,177 @@
+.list {
+  flex: 0 0 260px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: rgba(15, 8, 30, 0.85);
+  border-radius: 10px;
+  padding: 0.7rem;
+  max-height: 100%;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.list-title {
+  flex: 1 1 auto;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: text;
+  overflow-wrap: anywhere;
+}
+
+.list-header input {
+  flex: 1 1 auto;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  border: none;
+}
+
+.list-count {
+  flex: 0 0 auto;
+  font-size: 0.8rem;
+  color: #cbb8d8;
+}
+
+.list-delete {
+  flex: 0 0 auto;
+  background: none;
+  border: none;
+  color: #cbb8d8;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0.15rem 0.4rem;
+}
+
+.list-delete:hover {
+  color: #fff;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+
+.add-card-trigger {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: #cbb8d8;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.add-card-trigger:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.add-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.add-card-form input {
+  padding: 0.45rem 0.5rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.85rem;
+}
+
+.add-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-card-actions button[type="submit"] {
+  background: #6b3f7d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.add-card-actions .cancel-button {
+  background: none;
+  border: none;
+  color: #cbb8d8;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.add-list-trigger {
+  flex: 0 0 260px;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.14);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.75rem 0.9rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.add-list-trigger:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.add-list-form {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: rgba(15, 8, 30, 0.85);
+  border-radius: 10px;
+  padding: 0.7rem;
+}
+
+.add-list-form input {
+  padding: 0.45rem 0.5rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.85rem;
+}
+
+.add-list-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-list-actions button[type="submit"] {
+  background: #6b3f7d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.add-list-actions .cancel-button {
+  background: none;
+  border: none;
+  color: #cbb8d8;
+  font-size: 1rem;
+  cursor: pointer;
+}
